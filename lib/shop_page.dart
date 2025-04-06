@@ -11,9 +11,9 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-  final int _selectedIndex = 3; // Default index for Shop page
+  final int _selectedIndex = 3; 
 
-  // Inventory Data
+  
   final List<Map<String, dynamic>> farmingTools = [
     {"name": "Pots", "image": "assets/pot.png", "quantity": 0},
     {"name": "Grow Bags", "image": "assets/growing_bags.png", "quantity": 0},
@@ -38,13 +38,13 @@ class _ShopPageState extends State<ShopPage> {
     });
   }
 
-  // Function to check if any item is added
+  
   bool hasItemsInCart() {
     return farmingTools.any((item) => item["quantity"] > 0) ||
         seeds.any((item) => item["quantity"] > 0);
   }
 
-  // UI for list items
+
   Widget buildInventoryItem(
     Map<String, dynamic> item,
     List<Map<String, dynamic>> category,
@@ -116,9 +116,9 @@ class _ShopPageState extends State<ShopPage> {
     );
   }
 
-  // Handle navigation changes
+  
   void _onNavItemTapped(int index) {
-    if (index == _selectedIndex) return; // Prevent reloading the same page
+    if (index == _selectedIndex) return; 
 
     if (index == 0) {
       Navigator.pushReplacement(
